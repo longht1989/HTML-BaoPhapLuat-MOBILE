@@ -1,0 +1,170 @@
+// Live article
+.timeline {
+    &-wrap {
+        padding-left: 22px;
+        position: relative;
+
+        .timeline__item {
+            position: relative;
+
+            &+.timeline__item {
+                margin-top: 16px;
+            }
+
+            &::before {
+                display: block;
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                left: -22px;
+                top: 4px;
+                opacity: 0.4;
+                background: #E63D30;
+                border-radius: 50%;
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: -19px;
+                top: 7px;
+                background: #E63D30;
+                border-radius: 50%;
+            }
+        }
+
+        .timeline__time {
+            opacity: 0.5;
+            font-size: 14px;
+            color: #000000;
+            line-height: 24px;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+
+        .timeline__title {
+            margin-bottom: 12px;
+            font-size: 18px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .timeline__content {
+            &>p {
+                padding: 0 !important;
+            }
+        }
+    }
+}
+
+// Question Answer article
+.box {
+    .article-main & {
+
+        &__header {
+            color: $brand-primary;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: $font-family-serif;
+            padding-top: 0;
+            background: none;
+        }
+
+        &__content {
+
+            .input {
+                margin-bottom: 0;
+            }
+
+            .confirm {
+                margin: 12px 0 0;
+            }
+        }
+    }
+}
+
+.interview {
+    &-wrap {
+        @include clearfix();
+    }
+
+    &__item {
+        background: #f7f7f7;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 16px 8px 0;
+    }
+
+    &__header {
+        font-size: 14px;
+        margin-bottom: 8px !important;
+    }
+
+    &__question {
+        @include clearfix();
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 24px !important;
+        padding: 16px 16px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 32px;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #fff;
+        }
+
+        .interview__content {
+            font-style: italic;
+
+            p,
+            div {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    &__answer {
+        @include clearfix();
+        background-color: #FEE881;
+        border-radius: 5px;
+        padding: 16px 16px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 32px;
+            bottom: 100%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #FEE881;
+        }
+
+        .interview__content {
+            font-style: italic;
+
+            p,
+            div {
+                padding: 0 !important;
+            }
+        }
+    }
+}
