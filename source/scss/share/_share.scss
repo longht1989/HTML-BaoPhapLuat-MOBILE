@@ -81,12 +81,14 @@
 img.loading {
     background-color: #ddd;
     border: 1px solid #ccc;
-    width: 100%;
-    padding-bottom: 56.25%;
-
-    .story--horizontal & {
+    opacity: 0;
+    .story--left &,
+    .story--right & {
         width: 120px;
-        padding-bottom: 75%;
+        height: 90px;
+    }
+    .story--right & {
+        height: 120px;
     }
 }
 
