@@ -155,16 +155,42 @@
     }
 
     &--special {
-        border-radius: 5px;
+        border-radius: 0px 0px 5px 5px;
         overflow: hidden;
+        margin-left: -10px;
+        margin-right: -10px;
 
         .zone__header {
-            background: $brand-info;
+            background: #2c7e53;
             padding: 12px 0;
             margin-bottom: 0;
             box-shadow: 4px 0 10px 0 rgba(0, 0, 0, 0.20);
             z-index: 2;
             position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 2px;
+                bottom: 0;
+                width: 20px;
+                background: url('../img/arrow-left.png') left top no-repeat;
+                background-size: contain;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 20px;
+                background: url('../img/arrow-right.png') left top no-repeat;
+                background-size: contain;
+            }
 
             .zone__title {
                 text-align: center;
