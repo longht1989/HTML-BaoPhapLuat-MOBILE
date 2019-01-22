@@ -62,15 +62,23 @@
     }
 
     &__social {
-        position: fixed;
-        left: 50%;
-        margin-left: -610px;
-        top: 240px;
-        z-index: 3;
+        @include clearfix();
+        margin-top: 5px;
 
-        &>li {
+        .pull-left {
+            line-height: 32px;
+
+            iframe {
+                position: relative;
+                top: 6px;
+            }
+        }
+
+        li {
+            float: left;
+
             &+li {
-                margin-top: 8px;
+                margin-left: 5px;
             }
         }
     }
@@ -383,6 +391,7 @@
                 padding: 16px 16px 24px 24px;
             }
         }
+
         /* Dropcap */
         .dropcap {
             &:first-letter {
@@ -395,6 +404,7 @@
                 padding: 0 4px;
             }
         }
+
         /* Slider */
         .slider {
             background-color: #333333;
